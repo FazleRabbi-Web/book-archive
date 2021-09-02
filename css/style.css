@@ -1,0 +1,10 @@
+#spinner-toggle{
+    height: 80vh;
+    display: none;
+}
+#no-result-toggle{
+    display: none;
+}
+#search-item-toggle{
+    display: none;
+}
