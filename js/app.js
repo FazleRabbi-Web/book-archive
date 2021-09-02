@@ -3,7 +3,7 @@ const toggle = (id, displayStyle, addClass, removeClass) => {
     document.getElementById(id + '-toggle').style.display = displayStyle;
     document.getElementById(id + '-toggle').classList.add(addClass);
     document.getElementById(id + '-toggle').classList.remove(removeClass);
-}
+};
 // --------------------------initializing search value from search field-------------------------- //
 const searchBook = () => {
     const searchText = document.getElementById('search-field').value;
@@ -13,14 +13,14 @@ const searchBook = () => {
     toggle('search-item', 'none');
     loadBooks(searchText);
     document.getElementById('search-field').value = '';
-}
+};
 // --------------------------Load data from API (Book Library)-------------------------- //
 const loadBooks = searchText => {
     const url = `https://openlibrary.org/search.json?q=${searchText}/`;
     fetch(url)
         .then(res => res.json())
         .then(data => displayBooks(data.docs))
-}
+};
 // --------------------------Function for display data in UI-------------------------- //
 const displayBooks = books => {
     // --------------------------Total search item-------------------------- //
@@ -59,4 +59,4 @@ const displayBooks = books => {
     toggle('spinner', 'none', 'd-flex', 'd-flex');
     toggle('no-result', 'none');
     toggle('div-container', 'flex');
-}
+};
