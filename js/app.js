@@ -28,7 +28,7 @@ const displayBooks = books => {
     searchItem.textContent = '';
     const h3 = document.createElement('h3')
     h3.classList.add('fw-bold');
-    h3.innerText = `Search Result:${books.length} book found`;
+    h3.innerText = `Search Result: ${books.length} book found`;
     searchItem.appendChild(h3);
     const divContainer = document.getElementById('div-container-toggle');
     divContainer.textContent = '';// --------------------------Clean the UI for new search data-------------------------- //
@@ -43,7 +43,7 @@ const displayBooks = books => {
                 <div class="card-body text-white rounded bg-secondary">
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" width="365px" height="475px" class="card-img-top p-2" alt="...">
                     <div class="p-2">
-                        <h4 class="card-title">Book Name: <span class="fw-bold">${book.title}</span></h4>
+                        <h4 class="card-title">Book Name: <span class="fw-bold">${book.title}</h4>
                         <h6 class="card-title">Author Name: <span class="fw-bold">${book.author_name ? book.author_name[0] : ''}</span></h6>
                         <p class="card-text">First Publish: ${book.first_publish_year}</p>
                         <p class="card-text">Latest Publish: ${book.publish_date ? book.publish_date[0] : ''}</p>
