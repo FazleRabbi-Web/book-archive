@@ -36,7 +36,7 @@ const displayBooks = books => {
     if (books.length === 0) { // -------------------------- search data checking -------------------------- //
         toggle('no-result', 'block', 'd-flex');
     }
-    else{
+    else {
         toggle('search-item', 'block');
     }
     books?.forEach(book => { // -------------------------- using ternary operator -------------------------- //
@@ -49,7 +49,7 @@ const displayBooks = books => {
                     <div class="p-2">
                         <h4 class="card-title">Book Name: <span class="fw-bold">${book.title}</h4>
                         <h6 class="card-title">Author Name: <span class="fw-bold">${book.author_name ? book.author_name[0] : ''}</span></h6>
-                        <p class="card-text">First Publish: ${book.first_publish_year}</p>
+                        <p class="card-text">First Publish: ${book.first_publish_year ? book.first_publish_year : ''}</p>
                         <p class="card-text">Latest Publish: ${book.publish_date ? book.publish_date[0] : ''}</p>
                         <p class="card-text">Publisher: ${book.publisher ? book.publisher[0] : ''}</p>
                     </div>
