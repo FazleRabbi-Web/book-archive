@@ -11,6 +11,7 @@ const searchBook = () => {
     toggle('div-container', 'none');
     toggle('no-result', 'none', 'd-flex', 'd-flex');
     toggle('search-item', 'none');
+    document.getElementById('spinner-text').innerText = searchText;
     loadBooks(searchText);
     document.getElementById('search-field').value = '';
 };
@@ -35,6 +36,9 @@ const displayBooks = books => {
     if (books.length === 0) { // -------------------------- search data checking -------------------------- //
         toggle('no-result', 'block', 'd-flex');
     }
+    else{
+        toggle('search-item', 'block');
+    }
     books?.forEach(book => { // -------------------------- using ternary operator -------------------------- //
         const div = document.createElement('div') // -------------------------- create div to send data to UI as append child -------------------------- //
         div.classList.add('col')
@@ -55,7 +59,6 @@ const displayBooks = books => {
         divContainer.appendChild(div);
     });
     // -------------------------- Calling toggle function -------------------------- //
-    toggle('search-item', 'block');
     toggle('spinner', 'none', 'd-flex', 'd-flex');
     toggle('no-result', 'none');
     toggle('div-container', 'flex');

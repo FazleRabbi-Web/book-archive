@@ -39,14 +39,15 @@
         <!---------------------------- additional data section  ---------------------------->
         <section class="container">
             <div id="spinner-toggle" class=" justify-content-center align-items-center">
-                <div class="">
-                    <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div>
+                    <button class="btn btn-success" type="button" disabled>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <span class="text-dark">Searching for...</span> <span class="text-white" id="spinner-text"></span>
+                      </button>
                 </div>
             </div>
 
-            <div id="no-result-toggle" class=" bg-warning justify-content-center my-2 py-2">
+            <div id="no-result-toggle" class=" bg-danger justify-content-center my-2 py-2">
 
                 <h3 class="fw-bold">No result found, Please search again.</h3>
 
