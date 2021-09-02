@@ -28,7 +28,7 @@ const displayBooks = books => {
     searchItem.textContent = '';
     const h3 = document.createElement('h3')
     h3.classList.add('fw-bold');
-    h3.innerText = `${books.length} book found`;
+    h3.innerText = `Search Result:${books.length} book found`;
     searchItem.appendChild(h3);
     const divContainer = document.getElementById('div-container-toggle');
     divContainer.textContent = '';// --------------------------Clean the UI for new search data-------------------------- //
